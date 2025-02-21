@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Image</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        form {
+            border: 2px solid #ddd;
+            padding: 20px;
+            display: inline-block;
+            border-radius: 10px;
+            background: #f9f9f9;
+        }
+        input[type="file"] {
+            margin: 10px;
+        }
+        button {
+            padding: 10px 15px;
+            background: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+    <h1>Upload Ingredient Images</h1>
+    <form action="/detect_recipe" method="post" enctype="multipart/form-data">
+        <label for="images">Select multiple images:</label>
+        <input type="file" name="images" id="images" multiple accept="image/*" required>
+        <button type="submit">Upload & Detect</button>
+    </form>
+</body>
+</html>
